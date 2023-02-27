@@ -1,4 +1,5 @@
-const colors = require('tailwindcss/colors')
+/** @typedef {import('tailwindcss/colors')} palette */
+const palette = require('tailwindcss/colors')
 
 /** @typedef {import('tailwindcss/defaultTheme')} defaultTheme */
 const defaultTheme = require('tailwindcss/defaultTheme')
@@ -8,8 +9,7 @@ module.exports = {
 	content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/styles/**/*.{css,scss,sass}', './public/**/*.{svg}'],
 	theme: {
 		fontFamily: {
-			body: ['Cabin', ...defaultTheme.fontFamily.sans],
-			display: ['Raleway', ...defaultTheme.fontFamily.sans],
+			body: ['Inter', ...defaultTheme.fontFamily.sans],
 			DEFAULT: this.body,
 		},
 		extend: {
@@ -18,7 +18,8 @@ module.exports = {
 			},
 			colors: {
 				inherit: 'inherit',
-				primary: colors.blue['500'],
+				transparent: 'transparent',
+				primary: palette.blue['500'],
 			},
 			screens: (theme) => ({
 				'sm-only': { raw: `(max-width: ${theme.breakpoints('sm')})` },

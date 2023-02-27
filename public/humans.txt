@@ -1,0 +1,4 @@
+/* TEAM */
+Fullstack lead developer: Andrii Ivashchuk
+Github: https://github.com/andriilive
+Location: Prague, Czech Republic
