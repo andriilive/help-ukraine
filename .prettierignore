@@ -1,0 +1,12 @@
+.idea
+.git*
+node_modules
+.husky
+package*.json
+*.log
+*.psd
+*.sketch
+*.fig
+out
+.next
+public
