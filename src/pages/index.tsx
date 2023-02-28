@@ -4,14 +4,21 @@ import { ArticleJsonLd } from 'next-seo'
 import { Layout } from '@/layouts'
 import { jsonLdArticle } from '@/data/seo'
 import Container from '@/ui/Container'
+import { Box, Button, Grid, Text } from '@theme-ui/components'
 
-export const Page = ({ lang, ...props }: PageProps) => {
+export const PageHome = ({ lang, ...props }: PageProps) => {
 	return (
 		<Layout lang={lang} {...props}>
 			<ArticleJsonLd {...jsonLdArticle} />
 			<Container>
-				<h1>Page</h1>
+				<h1>Container</h1>
 			</Container>
+			<Grid>
+				<Box>
+					<Text>Tests</Text>
+					<Button>Button</Button>
+				</Box>
+			</Grid>
 		</Layout>
 	)
 }
@@ -22,4 +29,4 @@ export const getStaticProps: GetStaticProps = async (context): Promise<GetStatic
 	},
 })
 
-export default Page
+export default PageHome

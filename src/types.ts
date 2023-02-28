@@ -8,6 +8,12 @@ export type PageProps = {
 	lang: LanguagesAllowed
 }
 
+export namespace data {
+	export type Project = {
+		url: string
+	}
+}
+
 export namespace Data {
 	export type Project = {
 		url: string

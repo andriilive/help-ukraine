@@ -1,14 +1,14 @@
 import React from 'react'
 import Container from '@/ui/Container'
 
-const Footer: React.FC = (props) => {
+const Header: React.FC = (_props) => {
 	return (
-		<footer>
+		<nav>
 			<Container>
-				<h1>Footer</h1>
+				<h1>Header</h1>
 			</Container>
-		</footer>
+		</nav>
 	)
 }
 
-export default Footer
+export default Header

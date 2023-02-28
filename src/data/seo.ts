@@ -1,4 +1,4 @@
-import { ArticleJsonLdProps, BreadCrumbJsonLdProps, NextSeoProps, WebPageJsonLdProps } from 'next-seo'
+import { ArticleJsonLdProps, NextSeoProps, WebPageJsonLdProps } from 'next-seo'
 import { colors } from '@/theme/colors'
 import { ItemListElements } from 'next-seo/lib/types'
 

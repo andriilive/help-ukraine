@@ -1,4 +1,4 @@
-import '@/styles/global.pcss.css'
+import '@/theme/styles/global.pcss.css'
 
 import type { AppProps } from 'next/app'
 import { NextSeo, WebPageJsonLd } from 'next-seo'
