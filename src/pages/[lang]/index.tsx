@@ -1,18 +1,25 @@
-import type { LanguagesAllowed, PageProps, PagePropsWithProps } from '@/types'
-import type { GetStaticPathsResult, GetStaticPropsContext } from 'next'
-import TemplateHome from '@/templates/TemplateHome'
+import type { LanguagesAllowed, PageProps } from '@/types'
+import type { GetStaticPropsResult, GetStaticPaths, GetStaticProps } from 'next'
+import { ArticleJsonLd } from 'next-seo'
+import { Layout } from '@/layouts'
+import { jsonLdArticle } from '@/data/seo'
 
-export const Page = (props: PageProps) => {
-	return <TemplateHome {...props} />
+export const Page = ({ lang, ...props }: PageProps) => {
+	return (
+		<Layout lang={lang} {...props}>
+			<ArticleJsonLd {...jsonLdArticle} />
+			<main></main>
+		</Layout>
+	)
 }
 
-// `getStaticPaths` requires using `getStaticProps`
-export const getStaticProps = async (context: GetStaticPropsContext): Promise<PagePropsWithProps> => ({
+export const getStaticProps: GetStaticProps = async (context): Promise<GetStaticPropsResult<PageProps>> => ({
 	props: {
 		lang: (context.params?.lang as LanguagesAllowed) || 'uk',
 	},
 })
-export const getStaticPaths = async (): Promise<GetStaticPathsResult> => ({
+
+export const getStaticPaths: GetStaticPaths = async (_context) => ({
 	paths: [{ params: { lang: 'en' } }, { params: { lang: 'ru' } }],
 	fallback: false, // can also be true or 'blocking'
 })
