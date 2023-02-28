@@ -1,10 +1,9 @@
 import clsx from 'clsx'
-import { tv } from 'tailwind-variants'
+import { tv, VariantProps } from 'tailwind-variants'
 import styles from '@/ui/Container/styles.module.css'
-import React from 'react'
-import { UIContainer } from '@/types'
+import React, { ComponentPropsWithoutRef, PropsWithChildren } from 'react'
 
-export const twContainer = tv({
+const twContainer = tv({
 	base: styles.container,
 	variants: {
 		w: {
@@ -25,7 +24,7 @@ export const twContainer = tv({
 	},
 })
 
-const Container: UIContainer.ElContainerFC = ({
+const Container: ElContainerFC = ({
 	children,
 	w = twContainer.defaultVariants.w,
 	px = twContainer.defaultVariants.px,
@@ -39,3 +38,7 @@ const Container: UIContainer.ElContainerFC = ({
 	)
 }
 export default Container
+
+type ElVariants = VariantProps<typeof twContainer>
+type ElProps = PropsWithChildren<ElVariants> & ComponentPropsWithoutRef<'div'>
+type ElContainerFC = (props: ElProps) => JSX.Element | null
