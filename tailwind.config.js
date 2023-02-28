@@ -6,7 +6,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/styles/**/*.{css,scss,sass}', './public/**/*.{svg}'],
+	content: ['./src/**/*.{jsx,css}', './public/**/*.svg'],
 	theme: {
 		fontFamily: {
 			body: ['Inter', ...defaultTheme.fontFamily.sans],

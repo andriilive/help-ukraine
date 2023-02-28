@@ -1,21 +1,18 @@
 import palette from 'tailwindcss/colors'
-
-export const URL: string = process.env.NEXT_PUBLIC_URL || ''
-export const Project = {
-	URL,
-}
+import pageHomeContentEN from '@/content/en/pages/pageHome.json'
+import pageHomeContentRU from '@/content/ru/pages/pageHome.json'
+import pageHomeContentUk from '@/content/uk/pages/pageHome.json'
 
 export const Colors = {
 	primary: palette.blue['500'],
 }
 
-export const Theme = {
-	Colors,
+export const ProjectUrl: string = process.env.NEXT_PUBLIC_URL || ''
+
+export const HomepageContent = {
+	en: pageHomeContentEN,
+	ru: pageHomeContentRU,
+	uk: pageHomeContentUk,
 }
 
-const Data = {
-	Theme,
-	Project,
-}
-
-export default Data
+export const pageHomeContentDefault = HomepageContent.uk

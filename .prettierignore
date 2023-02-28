@@ -1,12 +1,6 @@
 .idea
-.git*
-node_modules
 .husky
-package*.json
-*.log
-*.psd
-*.sketch
-*.fig
-out
+node_modules
+.dist
+.git
 .next
-public
