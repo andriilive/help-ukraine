@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { LanguagesAllowed } from '@/types'
 import { HomepageContent, ProjectUrl } from '@/data'
 import { ArticleJsonLd, ArticleJsonLdProps, WebPageJsonLd, WebPageJsonLdProps } from 'next-seo'
-
+import Container from '@/components/core/Container'
 const TemplateHome = ({ lang, ...props }: { lang: LanguagesAllowed }) => {
 	const { content, meta } = HomepageContent[lang]
 
@@ -33,6 +33,19 @@ const TemplateHome = ({ lang, ...props }: { lang: LanguagesAllowed }) => {
 			</Head>
 			<WebPageJsonLd {...webPageJsonLd} />
 			<ArticleJsonLd {...articleJsonLd} />
+
+			<Container w={'fluid'}>
+				<h1>{content.title}</h1>
+			</Container>
+
+			<Container w={'default'}>
+				<h1>{content.title}</h1>
+			</Container>
+
+			<Container w={'tight'}>
+				<h1>{content.title}</h1>
+			</Container>
+
 			<article>
 				<header>
 					<h1>{content.title}</h1>

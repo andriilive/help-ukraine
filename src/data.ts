@@ -14,5 +14,3 @@ export const HomepageContent = {
 	ru: pageHomeContentRU,
 	uk: pageHomeContentUk,
 }
-
-export const pageHomeContentDefault = HomepageContent.uk

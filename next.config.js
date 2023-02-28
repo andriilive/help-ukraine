@@ -14,6 +14,7 @@ const nextConfig = {
 		/** @type {import('next/dist/server/config-shared').ExportPathMap } webConfig */
 		return defaultPathMap
 	},
+
 	// i18n: {
 	// 	locales: ['en', 'ru', 'uk'],
 	// 	defaultLocale: 'uk',

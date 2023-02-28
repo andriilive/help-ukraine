@@ -4,9 +4,12 @@ const palette = require('tailwindcss/colors')
 /** @typedef {import('tailwindcss/defaultTheme')} defaultTheme */
 const defaultTheme = require('tailwindcss/defaultTheme')
 
+/** @type {import('tailwind-variants/transformer').withTV} withTV */
+const { withTV } = require('tailwind-variants/transformer')
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-	content: ['./src/**/*.{jsx,css}', './public/**/*.svg'],
+module.exports = withTV({
+	content: ['./src/**/*.{jsx,css,js,tsx,ts}', './public/**/*.svg'],
 	theme: {
 		fontFamily: {
 			body: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -27,4 +30,4 @@ module.exports = {
 		},
 	},
 	plugins: [require('@tailwindcss/typography')],
-}
+})

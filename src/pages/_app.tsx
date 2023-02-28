@@ -1,4 +1,5 @@
 import '@/styles/tailwind.pcss.css'
+import '@/styles/global.pcss.css'
 import type { AppProps } from 'next/app'
 import { Colors } from '@/data'
 import { BreadcrumbJsonLd, NextSeo } from 'next-seo'

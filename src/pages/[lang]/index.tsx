@@ -1,6 +1,6 @@
 import type { LanguagesAllowed, PageProps, PagePropsWithProps } from '@/types'
 import type { GetStaticPathsResult, GetStaticPropsContext } from 'next'
-import TemplateHome from '@/components/TemplateHome'
+import TemplateHome from '@/templates/TemplateHome'
 
 export const Page = (props: PageProps) => {
 	return <TemplateHome {...props} />
