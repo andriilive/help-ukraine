@@ -4,7 +4,9 @@ import Container from '@/ui/Container'
 const Footer: React.FC = (props) => {
 	return (
 		<footer>
-			<Container>Footer</Container>
+			<Container>
+				<h1>Footer</h1>
+			</Container>
 		</footer>
 	)
 }
