@@ -1,22 +1,23 @@
 import type { Page } from '@/types'
 import type { GetStaticProps, NextPage } from 'next'
 import { ArticleJsonLd } from 'next-seo'
-import { Layout } from '@/layouts'
-import { jsonLdArticle } from '@/data/seo'
+import Layouts from '@/components/library/data/Layouts'
 import { Box, Button, Grid, Text } from '@theme-ui/components'
-import { project } from '@/data'
+import { project, jsonLd, Page as PageData } from '@/data'
 
 export const PageHome: NextPage<Page.DefaultProps> = ({ lang, ...props }) => {
+	console.log(PageData.Home)
+
 	return (
-		<Layout lang={lang} {...props}>
-			<ArticleJsonLd {...jsonLdArticle} />
+		<Layouts lang={lang} {...props}>
+			<ArticleJsonLd {...jsonLd.Article} />
 			<Grid>
 				<Box>
 					<Text>Tests</Text>
 					<Button>Button</Button>
 				</Box>
 			</Grid>
-		</Layout>
+		</Layouts>
 	)
 }
 

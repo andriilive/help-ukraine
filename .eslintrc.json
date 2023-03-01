@@ -6,7 +6,6 @@
 	],
 	"plugins": ["@typescript-eslint/eslint-plugin"],
 	"rules": {
-		"import/no-duplicates": ["warn", { "considerQueryString": true }],
 		"react/no-children-prop": "off",
 		"@typescript-eslint/no-namespace": "off",
 		"@typescript-eslint/no-var-requires": "off",

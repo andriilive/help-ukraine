@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { I18NConfig } from 'next/dist/server/config-shared'
+import { NextSeoProps } from 'next-seo'
 
 export type Children = JSX.Element | ReactNode | ReactNode[]
 
@@ -17,6 +18,7 @@ export namespace Page {
 export namespace Data {
 	export type project = {
 		url: string
+		seoDefaultConfig: NextSeoProps
 		i18n: Omit<I18NConfig, 'locales' | 'defaultLocale'> & {
 			locales: I18n.Language[]
 			defaultLocale: I18n.Language

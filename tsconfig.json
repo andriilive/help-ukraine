@@ -19,6 +19,6 @@
 		},
 		"incremental": true
 	},
-	"include": ["**/*.ts", "**/*.tsx", "**/*.mdx", "src/**/*.d.ts", "next-env.d.ts"],
-	"exclude": ["node_modules", "public", ".dist", ".husky", ".idea", ".next"]
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "next-env.d.ts"],
+	"exclude": ["node_modules", "public", ".dist", ".husky", ".idea", ".next", ".env"]
 }

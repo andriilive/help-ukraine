@@ -50,3 +50,35 @@ export const theme = makeTheme({
 		},
 	},
 })
+
+import palette from 'tailwindcss/colors'
+import { tv } from 'tailwind-variants'
+
+const colors = {
+	primary: palette.blue['500'],
+}
+
+export { colors, palette as defaultPalette }
+
+export namespace twComponents {
+	export const Container = tv({
+		base: 'mx-auto',
+		variants: {
+			w: {
+				prose: 'max-w-prose',
+				default: 'max-w-7xl',
+				none: ' ',
+				fullScreen: 'max-w-7xl lg:max-w-full',
+			},
+			px: {
+				default: 'px-4 sm:px-6 lg:px-8',
+				fullScreen: 'lg:px-24',
+				none: ' ',
+			},
+		},
+		defaultVariants: {
+			w: 'fullScreen',
+			px: 'fullScreen',
+		},
+	})
+}

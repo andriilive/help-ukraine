@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from '@/ui/Container'
+import Container from '@/components/library/core/Container'
 
 const Header: React.FC = (_props) => {
 	return (

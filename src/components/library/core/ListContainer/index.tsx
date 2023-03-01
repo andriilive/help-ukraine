@@ -1,6 +1,6 @@
 import { tv, VariantProps } from 'tailwind-variants'
 import { ComponentPropsWithoutRef, PropsWithChildren } from 'react'
-import styles from '@/ui/listContainer/styles.module.css'
+import styles from '@/components/library/core/ListContainer/styles.module.css'
 import clsx from 'clsx'
 
 const twListContainer = tv({
