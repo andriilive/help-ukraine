@@ -4,7 +4,7 @@
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended"
 	],
-	"plugins": ["@typescript-eslint/eslint-plugin", "@emotion"],
+	"plugins": ["@typescript-eslint/eslint-plugin"],
 	"rules": {
 		"react/no-children-prop": "off",
 		"@typescript-eslint/no-namespace": "off",

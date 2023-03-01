@@ -20,17 +20,6 @@
 		"jsxImportSource": "@emotion/react",
 		"incremental": true
 	},
-	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "next-env.d.ts"],
-	"exclude": [
-		"node_modules",
-		"public",
-		".dist",
-		".husky",
-		".idea",
-		".next",
-		".env",
-		"src/pages/_document.tsx",
-		".husky/render.ts",
-		".husky/styles.ts"
-	]
+	"include": ["src/**/*.ts", "src/**/*.tsx", "next-env.d.ts"],
+	"exclude": ["node_modules"]
 }

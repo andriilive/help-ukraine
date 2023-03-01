@@ -38,6 +38,7 @@
 		"country-flag-icons": "^1.5.5",
 		"next": "13.2.1",
 		"next-seo": "^5.15.0",
+		"nextra": "^2.2.16",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"theme-ui": "^0.15.5"
