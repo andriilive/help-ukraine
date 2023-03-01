@@ -21,5 +21,16 @@
 		"incremental": true
 	},
 	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts", "next-env.d.ts"],
-	"exclude": ["node_modules", "public", ".dist", ".husky", ".idea", ".next", ".env", "src/pages/_document.tsx", "src/theme/render.ts", "src/theme/styles.ts"]
+	"exclude": [
+		"node_modules",
+		"public",
+		".dist",
+		".husky",
+		".idea",
+		".next",
+		".env",
+		"src/pages/_document.tsx",
+		".husky/render.ts",
+		".husky/styles.ts"
+	]
 }

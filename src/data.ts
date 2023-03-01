@@ -2,7 +2,6 @@ import { Data } from '@/types'
 import pageHomeContentEN from '@/locales/en/page/home.json'
 import pageHomeContentRU from '@/locales/ru/page/home.json'
 import pageHomeContentUk from '@/locales/uk/page/home.json'
-import { colors } from '@/theme'
 import { ArticleJsonLdProps, WebPageJsonLdProps } from 'next-seo'
 import { ItemListElements } from 'next-seo/lib/types'
 
@@ -49,7 +48,7 @@ export const project: Data.project = {
 				href: '/',
 			},
 		],
-		themeColor: colors.primary,
+		themeColor: '#9eff00',
 		openGraph: {
 			type: 'website',
 			images: [
