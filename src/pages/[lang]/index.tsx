@@ -1,12 +1,12 @@
 import { GetStaticPaths } from 'next'
-
 import PageHome from '@/pages'
+import { Page } from '@/types'
 export { getStaticProps } from '@/pages'
 
-const PageHomeLocales = PageHome
-export default PageHomeLocales
+const PageHomeLocalisation = PageHome
+export default PageHomeLocalisation
 
-export const getStaticPaths: GetStaticPaths = async (_context) => ({
+export const getStaticPaths: GetStaticPaths<Page.DefaultProps> = async (_context) => ({
 	paths: [{ params: { lang: 'en' } }, { params: { lang: 'ru' } }],
 	fallback: false, // can also be true or 'blocking'
 })

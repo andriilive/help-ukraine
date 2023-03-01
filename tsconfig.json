@@ -15,11 +15,10 @@
 		"jsx": "preserve",
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./src/*"],
-			"@/public/*": ["./public/*"]
+			"@/*": ["./src/*"]
 		},
 		"incremental": true
 	},
-	"include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
+	"include": ["**/*.ts", "**/*.tsx", "**/*.mdx", "src/**/*.d.ts", "next-env.d.ts"],
 	"exclude": ["node_modules", "public", ".dist", ".husky", ".idea", ".next"]
 }

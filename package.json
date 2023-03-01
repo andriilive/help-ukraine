@@ -3,11 +3,12 @@
 	"version": "1.0.1",
 	"description": "Help Ukraine public offer",
 	"scripts": {
+		"generate:theme-json": "tailwindcss-export-config -c ./tailwind.config.js -d ./.generated/theme/theme -f json",
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
 		"export": "next build && next export -o .dist",
-		"lint": "eslint . --fix && prettier . --write && next lint",
+		"lint": "eslint . --fix && prettier . --write && tsc --noEmit && next lint",
 		"prepare": "husky install",
 		"postinstall": "npm run prepare",
 		"pre-commit": "npm run lint"
@@ -23,18 +24,20 @@
 	},
 	"homepage": "https://github.com/andriilive/help-ukraine#readme",
 	"dependencies": {
-		"@theme-ui/components": "^0.15.5",
-		"@theme-ui/tailwind": "^0.15.5",
+		"@emotion/react": "^11.10.6",
+		"@theme-ui/css": "^0.15.5",
 		"clsx": "^1.2.1",
 		"next": "13.2.1",
 		"next-seo": "^5.15.0",
 		"react": "18.2.0",
-		"react-dom": "18.2.0"
+		"react-dom": "18.2.0",
+		"theme-ui": "^0.15.5",
+		"ts-enum-util": "^4.0.2"
 	},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.5.9",
-		"@theme-ui/core": "^0.15.5",
 		"@theme-ui/preset-tailwind": "^0.15.5",
+		"@theme-ui/tailwind": "^0.15.5",
 		"@types/node": "18.14.2",
 		"@types/react": "18.0.28",
 		"@types/react-dom": "18.0.11",
@@ -49,6 +52,7 @@
 		"prettier-plugin-tailwindcss": "^0.2.3",
 		"tailwind-variants": "^0.0.30",
 		"tailwindcss": "^3.2.7",
+		"tailwindcss-export-config": "^4.1.0",
 		"typescript": "4.9.5"
 	}
 }

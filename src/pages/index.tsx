@@ -1,18 +1,15 @@
-import type { LanguagesAllowed, PageProps } from '@/types'
-import type { GetStaticPropsResult, GetStaticProps } from 'next'
+import type { Page } from '@/types'
+import type { GetStaticProps, NextPage } from 'next'
 import { ArticleJsonLd } from 'next-seo'
 import { Layout } from '@/layouts'
 import { jsonLdArticle } from '@/data/seo'
-import Container from '@/ui/Container'
 import { Box, Button, Grid, Text } from '@theme-ui/components'
+import { project } from '@/data'
 
-export const PageHome = ({ lang, ...props }: PageProps) => {
+export const PageHome: NextPage<Page.DefaultProps> = ({ lang, ...props }) => {
 	return (
 		<Layout lang={lang} {...props}>
 			<ArticleJsonLd {...jsonLdArticle} />
-			<Container>
-				<h1>Container</h1>
-			</Container>
 			<Grid>
 				<Box>
 					<Text>Tests</Text>
@@ -23,9 +20,9 @@ export const PageHome = ({ lang, ...props }: PageProps) => {
 	)
 }
 
-export const getStaticProps: GetStaticProps = async (context): Promise<GetStaticPropsResult<PageProps>> => ({
+export const getStaticProps: GetStaticProps<Page.DefaultProps, Page.DefaultProps> = async (context) => ({
 	props: {
-		lang: (context.params?.lang as LanguagesAllowed) || 'uk',
+		lang: context.params?.lang || project.i18n.defaultLocale || 'uk',
 	},
 })
 
