@@ -12,8 +12,13 @@ export const PageHome: NextPage<Page.DefaultProps> = ({ lang, ...props }) => {
 	return (
 		<Layouts lang={lang} {...props}>
 			<ArticleJsonLd {...jsonLd.Article} />
-			<Button></Button>
-			<Container></Container>
+			<Container>
+				<Button>Button</Button>
+				<Button color='secondary'>Button</Button>
+				<Button color='secondary' size={'lg'}>
+					Large Button
+				</Button>
+			</Container>
 		</Layouts>
 	)
 }
